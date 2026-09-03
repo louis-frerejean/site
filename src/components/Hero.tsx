@@ -7,19 +7,17 @@ export function Hero() {
         <div>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-ink-faint">
-              Portfolio compétences — {profile.location}
+              {profile.location}
             </p>
             <span className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-accent">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              Disponible pour missions
+              Disponible pour de nouveaux projets
             </span>
           </div>
-          <h1 className="mt-5 max-w-2xl text-4xl font-semibold leading-[1.1] tracking-tight text-ink sm:text-6xl">
-            Je construis des produits<span className="text-accent">.</span>
-            <br />
-            En code, et sans code<span className="text-accent">.</span>
+          <h1 className="mt-5 max-w-xl text-4xl font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
+            Des sites et des outils numériques simples, modernes et sécurisés
+            <span className="text-accent">.</span>
           </h1>
-          <p className="mt-5 max-w-xl font-mono text-sm text-ink-dim">{profile.title}</p>
           <p className="mt-6 max-w-xl leading-relaxed text-ink-dim">{profile.bio}</p>
           <p className="mt-3 max-w-xl leading-relaxed text-ink-dim">{profile.availability}</p>
           <div className="mt-9 flex flex-wrap items-center gap-5">
@@ -30,18 +28,10 @@ export function Hero() {
               Me contacter
             </a>
             <a
-              href="#projets"
+              href="#realisations"
               className="border border-line px-5 py-2.5 font-mono text-xs uppercase tracking-widest text-ink-dim transition hover:border-ink/40 hover:text-ink"
             >
-              Voir mes projets
-            </a>
-            <a
-              href={profile.cvPdf}
-              target="_blank"
-              rel="noreferrer"
-              className="font-mono text-xs uppercase tracking-widest text-ink-faint underline decoration-line underline-offset-4 transition hover:text-ink"
-            >
-              Télécharger mon CV
+              Voir mes réalisations
             </a>
           </div>
         </div>

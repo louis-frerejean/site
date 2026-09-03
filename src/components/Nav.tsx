@@ -1,10 +1,9 @@
 import { contact } from '../data/content'
 
 const links = [
-  { href: '#competences', label: 'Compétences' },
-  { href: '#projets', label: 'Projets' },
-  { href: '#no-code', label: 'No-code' },
-  { href: '#parcours', label: 'Parcours' },
+  { href: '#services', label: 'Services' },
+  { href: '#realisations', label: 'Réalisations' },
+  { href: '#a-propos', label: 'À propos' },
   { href: '#contact', label: 'Contact' },
 ]
 

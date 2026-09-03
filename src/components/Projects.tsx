@@ -2,10 +2,10 @@ import { codeProjects } from '../data/content'
 
 export function Projects() {
   return (
-    <section id="projets" className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
-      <h2 className="text-2xl font-semibold tracking-tight text-ink">Projets de code</h2>
+    <section id="realisations" className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
+      <h2 className="text-2xl font-semibold tracking-tight text-ink">Réalisations</h2>
       <p className="mt-3 max-w-2xl text-ink-dim">
-        Une sélection de projets perso et de projets menés dans le cadre de ma formation.
+        Quelques exemples de ce que j'ai construit, seul ou en équipe.
       </p>
 
       <div className="mt-12 border-t border-line">
@@ -51,9 +51,7 @@ export function Projects() {
                     {project.linkLabel ?? 'Voir le projet'} ↗
                   </a>
                 ) : (
-                  <span className="text-ink-faint">
-                    {project.private ? 'Dépôt privé' : 'Projet non public'}
-                  </span>
+                  <span className="text-ink-faint">Démo sur demande</span>
                 )}
                 {project.secondaryLink ? (
                   <a

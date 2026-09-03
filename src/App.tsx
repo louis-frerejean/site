@@ -1,10 +1,9 @@
+import { About } from './components/About'
 import { Contact } from './components/Contact'
 import { Hero } from './components/Hero'
 import { Nav } from './components/Nav'
-import { NoCode } from './components/NoCode'
 import { Projects } from './components/Projects'
-import { Skills } from './components/Skills'
-import { Timeline } from './components/Timeline'
+import { Services } from './components/Services'
 
 function App() {
   return (
@@ -12,10 +11,9 @@ function App() {
       <Nav />
       <main>
         <Hero />
-        <Skills />
+        <Services />
         <Projects />
-        <NoCode />
-        <Timeline />
+        <About />
         <Contact />
       </main>
     </div>
