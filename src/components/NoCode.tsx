@@ -2,23 +2,23 @@ import { noCodeSkills } from '../data/content'
 
 export function NoCode() {
   return (
-    <section id="no-code" className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
-      <h2 className="text-2xl font-bold tracking-tight text-white">Réalisations no-code</h2>
-      <p className="mt-3 max-w-2xl text-neutral-400">
+    <section id="no-code" className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
+      <h2 className="text-2xl font-semibold tracking-tight text-ink">Réalisations no-code</h2>
+      <p className="mt-3 max-w-2xl text-ink-dim">
         En parallèle du code, je livre aussi des solutions no-code pour des clients qui ont besoin
         d'aller vite. Section à compléter avec des cas concrets (avant/après, liens, captures).
       </p>
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2">
+      <div className="mt-12 border-t border-line">
         {noCodeSkills.map((skill) => (
           <div
             key={skill.name}
-            className="rounded-2xl border border-dashed border-amber-500/25 bg-amber-500/[0.03] p-6"
+            className="grid gap-2 border-b border-line py-6 sm:grid-cols-[200px_1fr_auto] sm:items-baseline sm:gap-6"
           >
-            <h3 className="font-semibold text-white">{skill.name}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-neutral-400">{skill.description}</p>
-            <p className="mt-4 text-xs uppercase tracking-widest text-amber-500/70">
-              À compléter — exemple client
+            <h3 className="font-semibold text-ink">{skill.name}</h3>
+            <p className="text-sm leading-relaxed text-ink-dim">{skill.description}</p>
+            <p className="font-mono text-[10px] uppercase tracking-widest text-ink-faint">
+              À compléter
             </p>
           </div>
         ))}

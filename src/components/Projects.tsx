@@ -1,75 +1,71 @@
 import { codeProjects } from '../data/content'
 
-const statusStyles: Record<string, string> = {
-  live: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
-  'en cours': 'bg-amber-500/10 text-amber-400 border-amber-500/20',
-  'projet perso': 'bg-neutral-500/10 text-neutral-400 border-neutral-500/20',
-}
-
 export function Projects() {
   return (
-    <section id="projets" className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
-      <h2 className="text-2xl font-bold tracking-tight text-white">Projets de code</h2>
-      <p className="mt-3 max-w-2xl text-neutral-400">
+    <section id="projets" className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
+      <h2 className="text-2xl font-semibold tracking-tight text-ink">Projets de code</h2>
+      <p className="mt-3 max-w-2xl text-ink-dim">
         Une sélection de projets perso et de projets menés dans le cadre de ma formation.
       </p>
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2">
-        {codeProjects.map((project) => (
+      <div className="mt-12 border-t border-line">
+        {codeProjects.map((project, i) => (
           <article
             key={project.name}
-            className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition hover:border-white/20"
+            className="grid gap-4 border-b border-line py-8 sm:grid-cols-[64px_1fr]"
           >
-            <div className="flex items-start justify-between gap-3">
-              <h3 className="text-lg font-semibold text-white">{project.name}</h3>
-              <span
-                className={`shrink-0 rounded-full border px-2.5 py-1 text-xs font-medium ${statusStyles[project.status]}`}
-              >
-                {project.status}
-              </span>
-            </div>
-            <p className="mt-1 text-sm font-medium text-indigo-400">{project.tagline}</p>
-            {project.date ? (
-              <p className="mt-1 text-xs text-neutral-500">{project.date}</p>
-            ) : null}
-            <p className="mt-3 flex-1 text-sm leading-relaxed text-neutral-400">
-              {project.description}
-            </p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {project.stack.map((tech) => (
-                <span
-                  key={tech}
-                  className="rounded-full bg-white/5 px-2.5 py-1 text-xs text-neutral-300"
-                >
-                  {tech}
+            <span className="font-mono text-sm text-accent">{String(i + 1).padStart(2, '0')}</span>
+
+            <div>
+              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <h3 className="text-lg font-semibold text-ink">{project.name}</h3>
+                <span className="font-mono text-[11px] uppercase tracking-wide text-ink-faint">
+                  — {project.status}
+                  {project.date ? ` · ${project.date}` : ''}
                 </span>
-              ))}
-            </div>
-            <div className="mt-5 flex items-center gap-4">
-              {project.link ? (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-sm font-medium text-indigo-400 transition hover:text-indigo-300"
-                >
-                  {project.linkLabel ?? 'Voir le projet'} →
-                </a>
-              ) : (
-                <p className="text-sm text-neutral-500">
-                  {project.private ? 'Dépôt privé' : 'Projet non public'}
-                </p>
-              )}
-              {project.secondaryLink ? (
-                <a
-                  href={project.secondaryLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-sm font-medium text-neutral-400 transition hover:text-neutral-200"
-                >
-                  {project.secondaryLinkLabel ?? 'Lien'} →
-                </a>
-              ) : null}
+              </div>
+              <p className="mt-1 text-sm text-ink-dim">{project.tagline}</p>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-dim">
+                {project.description}
+              </p>
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                {project.stack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="border border-line px-2 py-1 font-mono text-[10px] uppercase tracking-wide text-ink-faint"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-5 flex flex-wrap items-center gap-5 font-mono text-xs uppercase tracking-widest">
+                {project.link ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-ink underline decoration-line underline-offset-4 transition hover:text-accent"
+                  >
+                    {project.linkLabel ?? 'Voir le projet'} ↗
+                  </a>
+                ) : (
+                  <span className="text-ink-faint">
+                    {project.private ? 'Dépôt privé' : 'Projet non public'}
+                  </span>
+                )}
+                {project.secondaryLink ? (
+                  <a
+                    href={project.secondaryLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-ink-dim underline decoration-line underline-offset-4 transition hover:text-accent"
+                  >
+                    {project.secondaryLinkLabel ?? 'Lien'} ↗
+                  </a>
+                ) : null}
+              </div>
             </div>
           </article>
         ))}

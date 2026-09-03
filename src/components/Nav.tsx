@@ -10,15 +10,15 @@ const links = [
 
 export function Nav() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#08090c]/80 backdrop-blur">
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="#top" className="font-semibold tracking-tight text-white">
+    <header className="sticky top-0 z-50 border-b border-line bg-ground/90 backdrop-blur">
+      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
+        <a href="#top" className="text-sm font-semibold tracking-tight text-ink">
           Louis Frerejean
         </a>
-        <ul className="hidden gap-6 text-sm text-neutral-400 sm:flex">
+        <ul className="hidden gap-7 font-mono text-xs uppercase tracking-widest text-ink-faint sm:flex">
           {links.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="transition hover:text-white">
+              <a href={link.href} className="transition hover:text-ink">
                 {link.label}
               </a>
             </li>
@@ -28,9 +28,9 @@ export function Nav() {
           href={contact.github}
           target="_blank"
           rel="noreferrer"
-          className="rounded-full border border-white/15 px-4 py-1.5 text-sm text-neutral-200 transition hover:border-white/40 hover:text-white"
+          className="border border-line px-3 py-1.5 font-mono text-xs uppercase tracking-widest text-ink-dim transition hover:border-ink/40 hover:text-ink"
         >
-          GitHub
+          GitHub ↗
         </a>
       </nav>
     </header>

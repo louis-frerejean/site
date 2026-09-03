@@ -8,7 +8,7 @@ import { Timeline } from './components/Timeline'
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#08090c]">
+    <div className="min-h-screen bg-ground">
       <Nav />
       <main>
         <Hero />

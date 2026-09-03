@@ -2,21 +2,23 @@ import { profile } from '../data/content'
 
 export function Hero() {
   return (
-    <section id="top" className="mx-auto max-w-5xl px-6 pt-20 pb-16 sm:pt-28 sm:pb-24">
-      <div className="grid gap-12 sm:grid-cols-[1fr_auto] sm:items-center">
+    <section id="top" className="mx-auto max-w-5xl px-6 pt-24 pb-20 sm:pt-32 sm:pb-28">
+      <div className="grid gap-14 sm:grid-cols-[1fr_220px] sm:items-start">
         <div>
-          <p className="text-sm font-medium uppercase tracking-widest text-indigo-400">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-ink-faint">
             Portfolio compétences — {profile.location}
           </p>
-          <h1 className="mt-4 max-w-2xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            Je construis des produits — en code, et sans code.
+          <h1 className="mt-5 max-w-2xl text-4xl font-semibold leading-[1.1] tracking-tight text-ink sm:text-6xl">
+            Je construis des produits<span className="text-accent">.</span>
+            <br />
+            En code, et sans code<span className="text-accent">.</span>
           </h1>
-          <p className="mt-3 max-w-2xl text-base font-medium text-neutral-300">{profile.title}</p>
-          <p className="mt-5 max-w-2xl leading-relaxed text-neutral-400">{profile.bio}</p>
-          <div className="mt-8 flex flex-wrap gap-4">
+          <p className="mt-5 max-w-xl font-mono text-sm text-ink-dim">{profile.title}</p>
+          <p className="mt-6 max-w-xl leading-relaxed text-ink-dim">{profile.bio}</p>
+          <div className="mt-9 flex flex-wrap items-center gap-5">
             <a
               href="#projets"
-              className="rounded-full bg-indigo-500 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-400"
+              className="border border-accent bg-accent px-5 py-2.5 font-mono text-xs uppercase tracking-widest text-ground transition hover:bg-transparent hover:text-accent"
             >
               Voir mes projets
             </a>
@@ -24,23 +26,29 @@ export function Hero() {
               href={profile.cvPdf}
               target="_blank"
               rel="noreferrer"
-              className="rounded-full border border-white/15 px-6 py-2.5 text-sm font-semibold text-neutral-200 transition hover:border-white/40 hover:text-white"
+              className="border border-line px-5 py-2.5 font-mono text-xs uppercase tracking-widest text-ink-dim transition hover:border-ink/40 hover:text-ink"
             >
               Télécharger mon CV
             </a>
             <a
               href="#contact"
-              className="rounded-full px-6 py-2.5 text-sm font-semibold text-neutral-400 transition hover:text-white"
+              className="font-mono text-xs uppercase tracking-widest text-ink-faint underline decoration-line underline-offset-4 transition hover:text-ink"
             >
-              Me contacter →
+              Me contacter
             </a>
           </div>
         </div>
-        <img
-          src={profile.photo}
-          alt={profile.name}
-          className="h-40 w-40 shrink-0 justify-self-center rounded-2xl object-cover ring-1 ring-white/10 sm:h-48 sm:w-48 sm:justify-self-end"
-        />
+
+        <figure className="justify-self-center sm:justify-self-end">
+          <img
+            src={profile.photo}
+            alt={profile.name}
+            className="h-[220px] w-[220px] object-cover grayscale [filter:contrast(1.05)]"
+          />
+          <figcaption className="mt-2 border-t border-line pt-2 font-mono text-[10px] uppercase tracking-widest text-ink-faint">
+            {profile.name}
+          </figcaption>
+        </figure>
       </div>
     </section>
   )
