@@ -5,8 +5,8 @@ export const profile = {
   email: 'l.frerejean04@gmail.com',
   github: 'https://github.com/louis-frerejean',
   linkedin: 'https://www.linkedin.com/in/louis-frerejean/',
-  cvPdf: '/CV-Louis-Frerejean.pdf',
-  photo: '/louis.jpeg',
+  cvPdf: `${import.meta.env.BASE_URL}CV-Louis-Frerejean.pdf`,
+  photo: `${import.meta.env.BASE_URL}louis.jpeg`,
   bio: "Formé à la fois par la précision de l'usinage aéronautique — tolérances de ±0,01 mm sur des pièces pour l'aéronautique, le spatial et le nucléaire — et par la conception de formations IA pour l'industrie, je poursuis aujourd'hui un Bachelor Cybersécurité (RNCP6) en alternance à Guardia School. Je conçois des produits avec la même exigence, que le projet demande du code sur-mesure ou une solution no-code.",
 }
 
