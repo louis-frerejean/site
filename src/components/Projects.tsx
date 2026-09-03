@@ -29,6 +29,9 @@ export function Projects() {
               </span>
             </div>
             <p className="mt-1 text-sm font-medium text-indigo-400">{project.tagline}</p>
+            {project.date ? (
+              <p className="mt-1 text-xs text-neutral-500">{project.date}</p>
+            ) : null}
             <p className="mt-3 flex-1 text-sm leading-relaxed text-neutral-400">
               {project.description}
             </p>
@@ -42,18 +45,32 @@ export function Projects() {
                 </span>
               ))}
             </div>
-            {project.link ? (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-5 text-sm font-medium text-indigo-400 transition hover:text-indigo-300"
-              >
-                Voir le code →
-              </a>
-            ) : (
-              <p className="mt-5 text-sm text-neutral-500">Dépôt privé</p>
-            )}
+            <div className="mt-5 flex items-center gap-4">
+              {project.link ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm font-medium text-indigo-400 transition hover:text-indigo-300"
+                >
+                  {project.linkLabel ?? 'Voir le projet'} →
+                </a>
+              ) : (
+                <p className="text-sm text-neutral-500">
+                  {project.private ? 'Dépôt privé' : 'Projet non public'}
+                </p>
+              )}
+              {project.secondaryLink ? (
+                <a
+                  href={project.secondaryLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm font-medium text-neutral-400 transition hover:text-neutral-200"
+                >
+                  {project.secondaryLinkLabel ?? 'Lien'} →
+                </a>
+              ) : null}
+            </div>
           </article>
         ))}
       </div>

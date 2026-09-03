@@ -4,6 +4,7 @@ import { Nav } from './components/Nav'
 import { NoCode } from './components/NoCode'
 import { Projects } from './components/Projects'
 import { Skills } from './components/Skills'
+import { Timeline } from './components/Timeline'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Skills />
         <Projects />
         <NoCode />
+        <Timeline />
         <Contact />
       </main>
     </div>

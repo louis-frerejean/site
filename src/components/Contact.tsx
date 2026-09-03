@@ -1,4 +1,4 @@
-import { contact } from '../data/content'
+import { contact, profile } from '../data/content'
 
 export function Contact() {
   return (
@@ -25,6 +25,14 @@ export function Contact() {
             className="rounded-full border border-white/15 px-6 py-2.5 text-sm font-semibold text-neutral-200 transition hover:border-white/40 hover:text-white"
           >
             GitHub
+          </a>
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full border border-white/15 px-6 py-2.5 text-sm font-semibold text-neutral-200 transition hover:border-white/40 hover:text-white"
+          >
+            LinkedIn
           </a>
         </div>
       </div>
