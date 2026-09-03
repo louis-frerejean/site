@@ -9,8 +9,8 @@ export function Contact() {
           Un projet à me confier ?
         </h2>
         <p className="mt-3 max-w-xl text-ink-dim">
-          Que ce soit du développement sur-mesure ou une solution no-code rapide à mettre en place,
-          discutons-en.
+          Site vitrine, boutique en ligne, automatisation, projet sur-mesure — écrivez-moi, on en
+          discute simplement et sans engagement.
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-5">
           <a

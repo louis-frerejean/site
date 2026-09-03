@@ -8,6 +8,8 @@ export const profile = {
   cvPdf: `${import.meta.env.BASE_URL}CV-Louis-Frerejean.pdf`,
   photo: `${import.meta.env.BASE_URL}louis.jpeg`,
   bio: "Formé à la fois par la précision de l'usinage aéronautique — tolérances de ±0,01 mm sur des pièces pour l'aéronautique, le spatial et le nucléaire — et par la conception de formations IA pour l'industrie, je poursuis aujourd'hui un Bachelor Cybersécurité (RNCP6) en alternance à Guardia School. Je conçois des produits avec la même exigence, que le projet demande du code sur-mesure ou une solution no-code.",
+  availability:
+    "Disponible pour des missions ponctuelles à côté de l'alternance : site vitrine, automatisation, projet sur-mesure.",
 }
 
 export type CodeProject = {
@@ -25,6 +27,15 @@ export type CodeProject = {
 }
 
 export const codeProjects: CodeProject[] = [
+  {
+    name: 'ALTéRA',
+    tagline: 'Plateforme de contenu & paiement pour familles — en binôme',
+    description:
+      "Refonte du moteur du site ALTéRA (Next.js + Supabase), développée en collaboration : paiement Stripe réellement relié au déverrouillage de contenu (webhook vérifié en conditions réelles), authentification familles, backoffice admin sans code pour ajouter du contenu, et un correctif de sécurité RLS sur la base de données.",
+    stack: ['Next.js', 'Supabase', 'Stripe', 'TypeScript', 'Vercel'],
+    status: 'live',
+    private: true,
+  },
   {
     name: 'PickOne',
     tagline: 'Decision Intelligence Engine — app mobile',
