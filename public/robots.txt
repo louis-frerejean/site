@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://louis-frerejean.github.io/site/sitemap.xml

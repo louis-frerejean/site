@@ -3,7 +3,7 @@
 Portfolio présentant mes compétences en code et en no-code : projets techniques,
 réalisations no-code pour clients, parcours et formation.
 
-Site en ligne : https://louis-frerejean.github.io/skills-portfolio/
+Site en ligne : https://louis-frerejean.github.io/site/
 
 ## Stack
 

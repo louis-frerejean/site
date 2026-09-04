@@ -38,7 +38,10 @@ export function Contact() {
         </div>
       </div>
       <p className="mt-10 text-center text-sm text-ink-faint">
-        © {new Date().getFullYear()} Louis Frerejean
+        © {new Date().getFullYear()} Louis Frerejean ·{' '}
+        <a href={`${import.meta.env.BASE_URL}mentions-legales.html`} className="underline decoration-line underline-offset-4 hover:text-accent">
+          Mentions légales
+        </a>
       </p>
     </section>
   )

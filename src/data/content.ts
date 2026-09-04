@@ -79,7 +79,6 @@ export const codeProjects: CodeProject[] = [
 export type Service = {
   name: string
   description: string
-  priceFrom: string
 }
 
 export const services: Service[] = [
@@ -87,31 +86,26 @@ export const services: Service[] = [
     name: 'Sites vitrines',
     description:
       "Un site simple et clair pour présenter votre activité : qui vous êtes, ce que vous proposez, comment vous contacter. Sur-mesure ou via des outils comme WordPress selon le besoin.",
-    priceFrom: 'à partir de 300 €',
   },
   {
     name: 'Boutiques en ligne',
     description:
       "Vendre vos produits ou services sur internet : catalogue, paiement en ligne, gestion des commandes.",
-    priceFrom: 'à partir de 800 €',
   },
   {
     name: 'Automatisation',
     description:
       "Gagner du temps sur les tâches répétitives : connecter vos outils entre eux pour qu'ils travaillent ensemble automatiquement (via Make).",
-    priceFrom: 'à partir de 150 €',
   },
   {
     name: 'Organisation (Notion)',
     description:
       "Un espace pour organiser votre activité — suivi de projets, de clients, de stock — sans usine à gaz, pensé pour vous.",
-    priceFrom: 'à partir de 100 €',
   },
   {
     name: 'Applications & outils sur-mesure',
     description:
       "Quand une solution toute faite ne suffit pas : une application mobile ou un outil pensé spécifiquement pour votre besoin.",
-    priceFrom: 'sur devis',
   },
 ]
 
@@ -142,17 +136,6 @@ export const processSteps: ProcessStep[] = [
       "Votre site ou outil est mis en ligne, et je reste disponible après coup pour les petits ajustements.",
   },
 ]
-
-export type Testimonial = {
-  quote: string
-  author: string
-}
-
-export const testimonial: Testimonial = {
-  quote:
-    "Louis dans une entreprise, c'est un joyau pour le travail en commun. Vraiment je recommande sans aucun problème.",
-  author: 'Nizier Thomassoni, responsable production & RH',
-}
 
 export const contact = {
   email: 'l.frerejean04@gmail.com',
