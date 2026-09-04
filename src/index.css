@@ -10,16 +10,18 @@
 @theme {
   --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
-  --color-ink: #f4f3ee;
-  --color-ink-dim: #9a9a92;
-  --color-ink-faint: #6b6b64;
-  --color-ground: #070706;
-  --color-line: rgba(244, 243, 238, 0.1);
-  --color-accent: #ff5a1f;
+  --color-ink: #2a2118;
+  --color-ink-dim: #6e6154;
+  --color-ink-faint: #a99c8c;
+  --color-ground: #faf6f0;
+  --color-surface: #ffffff;
+  --color-line: #e8dece;
+  --color-accent: #c2542a;
+  --color-accent-soft: #f3e2d3;
 }
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html {
@@ -34,5 +36,5 @@ body {
 
 ::selection {
   background: var(--color-accent);
-  color: #0a0500;
+  color: var(--color-surface);
 }
