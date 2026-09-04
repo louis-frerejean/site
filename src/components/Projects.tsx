@@ -12,54 +12,64 @@ export function Projects() {
         {codeProjects.map((project) => (
           <article
             key={project.name}
-            className="rounded-2xl border border-line bg-surface p-6 shadow-sm sm:p-8"
+            className="overflow-hidden rounded-2xl border border-line bg-surface shadow-sm"
           >
-            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-              <h3 className="text-lg font-semibold text-ink">{project.name}</h3>
-              <span className="text-sm text-ink-faint">
-                {project.status}
-                {project.date ? ` · ${project.date}` : ''}
-              </span>
-            </div>
-            <p className="mt-1 text-sm text-ink-dim">{project.tagline}</p>
-            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-dim">
-              {project.description}
-            </p>
-
-            <div className="mt-4 flex flex-wrap gap-2">
-              {project.stack.map((tech) => (
-                <span
-                  key={tech}
-                  className="rounded-full bg-accent-soft px-3 py-1 text-xs font-medium text-accent"
-                >
-                  {tech}
+            {project.image ? (
+              <img
+                src={project.image}
+                alt={`Aperçu du projet ${project.name}`}
+                className="h-56 w-full object-cover object-top"
+                loading="lazy"
+              />
+            ) : null}
+            <div className="p-6 sm:p-8">
+              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <h3 className="text-lg font-semibold text-ink">{project.name}</h3>
+                <span className="text-sm text-ink-faint">
+                  {project.status}
+                  {project.date ? ` · ${project.date}` : ''}
                 </span>
-              ))}
-            </div>
+              </div>
+              <p className="mt-1 text-sm text-ink-dim">{project.tagline}</p>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-dim">
+                {project.description}
+              </p>
 
-            <div className="mt-5 flex flex-wrap items-center gap-5 text-sm">
-              {project.link ? (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-medium text-ink underline decoration-line underline-offset-4 transition hover:text-accent"
-                >
-                  {project.linkLabel ?? 'Voir le projet'} ↗
-                </a>
-              ) : (
-                <span className="text-ink-faint">Démo sur demande</span>
-              )}
-              {project.secondaryLink ? (
-                <a
-                  href={project.secondaryLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-ink-dim underline decoration-line underline-offset-4 transition hover:text-accent"
-                >
-                  {project.secondaryLinkLabel ?? 'Lien'} ↗
-                </a>
-              ) : null}
+              <div className="mt-4 flex flex-wrap gap-2">
+                {project.stack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-full bg-accent-soft px-3 py-1 text-xs font-medium text-accent"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-5 flex flex-wrap items-center gap-5 text-sm">
+                {project.link ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-medium text-ink underline decoration-line underline-offset-4 transition hover:text-accent"
+                  >
+                    {project.linkLabel ?? 'Voir le projet'} ↗
+                  </a>
+                ) : (
+                  <span className="text-ink-faint">Démo sur demande</span>
+                )}
+                {project.secondaryLink ? (
+                  <a
+                    href={project.secondaryLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-ink-dim underline decoration-line underline-offset-4 transition hover:text-accent"
+                  >
+                    {project.secondaryLinkLabel ?? 'Lien'} ↗
+                  </a>
+                ) : null}
+              </div>
             </div>
           </article>
         ))}

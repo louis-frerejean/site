@@ -17,11 +17,19 @@ export function Services() {
             key={service.name}
             className="rounded-2xl border border-line bg-surface p-6 shadow-sm"
           >
-            <h3 className="font-semibold text-ink">{service.name}</h3>
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <h3 className="font-semibold text-ink">{service.name}</h3>
+              <span className="rounded-full bg-accent-soft px-3 py-1 text-xs font-medium text-accent">
+                {service.priceFrom}
+              </span>
+            </div>
             <p className="mt-2 text-sm leading-relaxed text-ink-dim">{service.description}</p>
           </div>
         ))}
       </div>
+      <p className="mt-6 text-sm text-ink-faint">
+        Tarifs indicatifs — précisés lors du devis, selon la taille et les besoins du projet.
+      </p>
     </section>
   )
 }
