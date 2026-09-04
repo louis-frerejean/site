@@ -38,6 +38,17 @@ export function Contact() {
         </div>
       </div>
       <p className="mt-10 text-center text-sm text-ink-faint">
+        Vous êtes une entreprise ou une école ?{' '}
+        <a
+          href="https://louis-frerejean.github.io/portfolio/"
+          target="_blank"
+          rel="noreferrer"
+          className="underline decoration-line underline-offset-4 hover:text-accent"
+        >
+          Voir mon CV
+        </a>
+      </p>
+      <p className="mt-2 text-center text-sm text-ink-faint">
         © {new Date().getFullYear()} Louis Frerejean ·{' '}
         <a href={`${import.meta.env.BASE_URL}mentions-legales.html`} className="underline decoration-line underline-offset-4 hover:text-accent">
           Mentions légales
