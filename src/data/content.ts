@@ -18,6 +18,7 @@ export type CodeProject = {
   status: 'live' | 'en cours' | 'projet perso'
   date?: string
   image?: string
+  imagePosition?: 'top' | 'left-top'
   link?: string
   linkLabel?: string
   secondaryLink?: string
@@ -33,6 +34,7 @@ export const codeProjects: CodeProject[] = [
     stack: ['Next.js', 'Supabase', 'Stripe', 'Vercel'],
     status: 'live',
     image: `${import.meta.env.BASE_URL}projects/altera.jpg`,
+    imagePosition: 'left-top',
     link: 'https://www.alteraexplore.com/',
     linkLabel: 'Voir le site',
   },

@@ -15,7 +15,7 @@ export function Services() {
         {services.map((service) => (
           <div
             key={service.name}
-            className="rounded-2xl border border-line bg-surface p-6 shadow-sm"
+            className="rounded-2xl border border-line bg-surface p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
           >
             <h3 className="font-semibold text-ink">{service.name}</h3>
             <p className="mt-2 text-sm leading-relaxed text-ink-dim">{service.description}</p>

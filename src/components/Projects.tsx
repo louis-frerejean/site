@@ -12,13 +12,15 @@ export function Projects() {
         {codeProjects.map((project) => (
           <article
             key={project.name}
-            className="overflow-hidden rounded-2xl border border-line bg-surface shadow-sm"
+            className="overflow-hidden rounded-2xl border border-line bg-surface shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
           >
             {project.image ? (
               <img
                 src={project.image}
                 alt={`Aperçu du projet ${project.name}`}
-                className="h-56 w-full object-cover object-top"
+                className={`h-64 w-full object-cover ${
+                  project.imagePosition === 'left-top' ? 'object-left-top' : 'object-top'
+                }`}
                 loading="lazy"
               />
             ) : null}
