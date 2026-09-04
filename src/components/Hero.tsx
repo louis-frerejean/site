@@ -38,6 +38,9 @@ export function Hero() {
           <img
             src={profile.photo}
             alt={profile.name}
+            width={220}
+            height={220}
+            fetchPriority="high"
             className="h-[220px] w-[220px] rounded-3xl object-cover shadow-md"
           />
           <figcaption className="mt-3 text-center text-sm text-ink-faint sm:text-right">
